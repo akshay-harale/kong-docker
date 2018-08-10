@@ -34,4 +34,8 @@ docker run --name jboss-keycloak \
  -e KEYCLOAK_PASSWORD=admin \
  -p 8080:8080 \
  jboss/keycloak
+ 
+kcadm.sh config credentials --server http://localhost:8080/auth --realm master --user admin
+kcadm.sh update realms/realmname -s sslRequired=NONE
+
 
