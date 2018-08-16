@@ -28,7 +28,7 @@ docker run -d --name kong \
     -p 8444:8444 \
     my-kong:latest
 
-docker run --name jboss-keycloak \
+docker run -d --name jboss-keycloak \
  --network=kong-net \
  -e KEYCLOAK_USER=admin \
  -e KEYCLOAK_PASSWORD=admin \
